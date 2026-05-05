@@ -19,7 +19,7 @@ This repository contains the code and resources for reproducing the AutoDAN jail
 ## Observations from the Experiments
 
 - **Efficiency gap:** TinyLlama‑1.1B was broken in ≤ 4 generations, while Llama‑3‑8B needed up to 25.
-- **Transfer success:** 100 % to Zephyr, 90 % to Mistral – the two failures were bomb and virus prompts.
+- **Transfer success:** 100 % to Zephyr, 90 % to Mistral.
 - **Qualitative behavior:** Successful attacks often produced narrations featuring an invented persona (e.g., “Alex”), leveraging the role‑play template.
 - **Loss dynamics:** In harder cases, the loss remained flat for many generations before a sudden drop, corresponding to the moment the guardrails were circumvented.
 - **Quantization:** The use of 4‑bit models did not prevent the search from finding effective prompts.
