@@ -2,6 +2,30 @@
 
 This repository contains the code and resources for reproducing the AutoDAN jailbreak attack experiments on aligned large language models. The work is based on the paper *“AutoDAN: Interpretable and Stealthy Jailbreak Attacks on Aligned LLMs”*.
 
+## Key Results
+
+### Jailbreak Efficiency (Loss vs. Generation)
+
+| Quick Run (TinyLlama) | Full Run (Llama‑3‑8B) |
+|-----------------------|------------------------|
+| ![quick run loss](quick_run.png) | ![full run loss](full_run.png) |
+
+### Time per Sample
+
+| Quick Run | Full Run |
+|-----------|----------|
+| ![quick time](time_taken_per_sample_quick.png) | ![full time](time_taken_per_sample_full.png) |
+
+## Observations from the Experiments
+
+- **Efficiency gap:** TinyLlama‑1.1B was broken in ≤ 4 generations, while Llama‑3‑8B needed up to 25.
+- **Transfer success:** 100 % to Zephyr, 90 % to Mistral – the two failures were bomb and virus prompts.
+- **Qualitative behavior:** Successful attacks often produced narrations featuring an invented persona (e.g., “Alex”), leveraging the role‑play template.
+- **Loss dynamics:** In harder cases, the loss remained flat for many generations before a sudden drop, corresponding to the moment the guardrails were circumvented.
+- **Quantization:** The use of 4‑bit models did not prevent the search from finding effective prompts.
+
+See the full report (`report.pdf`) for detailed numbers and plots.
+
 ## Contents
 
 - `autodan_colab_lite_all_in_one_quick.ipynb` – Quick experiment with TinyLlama‑1.1B‑Chat (source) and Zephyr‑7b‑beta (target).
