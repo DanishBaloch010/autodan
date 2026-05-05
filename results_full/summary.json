@@ -1,0 +1,17 @@
+{
+  "attack": {
+    "num_samples": 20,
+    "search_success_rate": 0.95,
+    "keyword_asr_full_response": 0.95,
+    "keyword_asr_prefix_only": 0.95,
+    "avg_time_sec": 153.2374,
+    "median_time_sec": 47.76049999999999,
+    "avg_steps_to_success": 4.684210526315789
+  },
+  "transfer": {
+    "num_samples": 20,
+    "transfer_success_rate": 0.9,
+    "transfer_keyword_asr_full_response": 0.9,
+    "transfer_keyword_asr_prefix_only": 1.0
+  }
+}
